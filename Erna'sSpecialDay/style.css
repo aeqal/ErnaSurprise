@@ -1,0 +1,108 @@
+/* General body styling */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    height: 100vh; /* Ensure the body takes full height */
+    overflow: hidden; /* Prevent body overflow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: backgroundAnimation 15s ease infinite; /* Smooth background animation */
+}
+
+/* Keyframes for background animation */
+@keyframes backgroundAnimation {
+    0% {
+        background: linear-gradient(45deg, #ff6b6b, #ffcc6b);
+    }
+    20% {
+        background: linear-gradient(45deg, #ff6bff, #6bff6b);
+    }
+    40% {
+        background: linear-gradient(45deg, #6bff6b, #6b6bff);
+    }
+    60% {
+        background: linear-gradient(45deg, #6b6bff, #ff6bcc);
+    }
+    80% {
+        background: linear-gradient(45deg, #ffcc6b, #ff6b6b);
+    }
+    100% {
+        background: linear-gradient(45deg, #ff6b6b, #ff6bcc);
+    }
+}
+
+/* Main Content Section */
+.main-content {
+    position: relative;
+    max-width: 800px;
+    max-height: 90vh; /* Limit max height for scrollability */
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.9); /* Slightly opaque white background */
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Keyframes for content animation */
+@keyframes contentAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button Styling */
+#revealButton {
+    padding: 12px 24px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #ff6b6b; /* Button color */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    margin-top: 20px; /* Space above the button */
+}
+
+#revealButton:hover {
+    background-color: #ff4d4d; /* Darker on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Secret Message Styling */
+#secretMessage {
+    font-size: 1.5em;
+    color: #555;
+    margin-top: 15px; /* Space above the message */
+    font-weight: bold;
+}
+
+/* Photo Grid Styling */
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.photo {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    margin: 10px; /* Space between photos */
+    border-radius: 10px; /* Rounded corners for photos */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    transition: transform 0.3s; /* Smooth scale effect */
+}
+
+.photo:hover {
+    transform: scale(1.05); /* Enlarge photo on hover */
+}
